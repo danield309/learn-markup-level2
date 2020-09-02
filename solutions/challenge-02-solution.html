@@ -20,7 +20,7 @@
           <option>starships</option>
         </select>
       </p>
-      
+
       <p>
         <button type="submit">Submit</button>
       </p>
@@ -34,7 +34,7 @@
     <script>
 
       // No need to edit below this point
-      // Get reference to DOM elements 
+      // Get reference to DOM elements
       const form = document.getElementById('form')
       const results = document.getElementById('results')
       const swapiId = document.getElementById('swapi-id')
@@ -63,7 +63,7 @@
       // Handle Data returned from Stars Wars API
       function handleData(json) {
         console.log(json)
-        // Future lesson takes this object apart to generate 
+        // Future lesson takes this object apart to generate
         let text = ''
 
         const keys = Object.keys(json)

@@ -51,7 +51,7 @@
             How Many
         </label>
       </p>
-      
+
       <p>
         <button type="submit">Submit</button>
       </p>
@@ -66,7 +66,7 @@
       const form = document.getElementById('form')
       const results = document.getElementById('results')
       const giphySearch = document.getElementById('giphy-search')
-      
+
       form.onsubmit = (e) => {
         e.preventDefault()
         const search = giphySearch.value
@@ -79,7 +79,7 @@
         console.log(document.getElementById('cats-only'))
 
         if (document.getElementById('cats-only') !== null) {
-          catsOnly = document.getElementById('cats-only').checked 
+          catsOnly = document.getElementById('cats-only').checked
         }
 
         const search = catsOnly ? 'cats '+q : q
@@ -97,19 +97,19 @@
         if (document.getElementById('show-title') !== null) {
           showTitle = document.getElementById('show-title').checked
         }
-        
+
         let size = 'fixed_height'
         try {
           size = Array.from(document.getElementsByName('size')).filter(item => item.checked)[0].value
         } catch {
-          // 
+          //
         }
 
         let count = 3
         try {
           count = document.getElementById('image-count').value
         } catch {
-          // 
+          //
         }
 
         let str = ''
@@ -125,7 +125,7 @@
             <p>${title}</p>
           </div>`
         }
-        
+
         results.innerHTML = str
       }
 
